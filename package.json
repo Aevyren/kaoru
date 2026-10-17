@@ -1,5 +1,5 @@
 {
-  "name": "syncora",
+  "name": "kaoru",
   "type": "module",
   "private": true,
   "workspaces": ["apps/*"],
