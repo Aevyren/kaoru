@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
     "types": ["bun"],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx"
