@@ -1,9 +1,31 @@
 {
   "name": "kaoru",
-  "type": "module",
-  "private": true,
-  "workspaces": ["apps/*"],
   "devDependencies": {
-    "@types/bun": "latest"
-  }
+    "@types/bun": "latest",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "bunx oxlint --fix",
+      "bunx prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "bunx prettier --write"
+    ]
+  },
+  "private": true,
+  "scripts": {
+    "dev": "bun --filter \"*\" dev",
+    "dev:web": "bun --filter @kaoru/web dev",
+    "dev:api": "bun --filter @kaoru/api dev",
+    "build": "bun --filter \"*\" build",
+    "lint": "bun --filter \"*\" lint",
+    "typecheck": "bun --filter \"*\" typecheck",
+    "prepare": "husky"
+  },
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ]
 }
