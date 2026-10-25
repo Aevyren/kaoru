@@ -18,6 +18,11 @@
   "scripts": {
     "dev:web": "bun --cwd apps/web dev",
     "dev:api": "bun --cwd apps/api dev",
+    "db:generate": "bun --cwd apps/api db:generate",
+    "db:migrate": "bun --cwd apps/api db:migrate",
+    "db:studio": "bun --cwd apps/api db:studio",
+    "db:seed": "bun --cwd apps/api db:seed",
+    "db:reset": "bun --cwd apps/api db:reset",
     "build": "bun --filter \"*\" build",
     "lint": "bun --filter \"*\" lint",
     "typecheck": "bun --filter \"*\" typecheck",
