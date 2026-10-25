@@ -16,9 +16,8 @@
   },
   "private": true,
   "scripts": {
-    "dev": "bun --filter \"*\" dev",
-    "dev:web": "bun --filter @kaoru/web dev",
-    "dev:api": "bun --filter @kaoru/api dev",
+    "dev:web": "bun --cwd apps/web dev",
+    "dev:api": "bun --cwd apps/api dev",
     "build": "bun --filter \"*\" build",
     "lint": "bun --filter \"*\" lint",
     "typecheck": "bun --filter \"*\" typecheck",
